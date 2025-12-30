@@ -1,7 +1,8 @@
 from telegram import Update
 from telegram.ext import ApplicationBuilder, CommandHandler, MessageHandler, ContextTypes, filters
 
-TOKEN = "8375926490:AAFTC3t3s-P-RqtLzaUPAydkrIYnZUXkzIw"
+import os
+TOKEN = os.environ.get("BOT_TOKEN")
 
 duelo_activo = False
 players = []
@@ -138,3 +139,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
